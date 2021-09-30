@@ -22,7 +22,7 @@ public class Tamagotchi {
         System.out.println(this.firstname + " is playing and having fun with a ball!");
     }
     public void feed(){
-        System.out.println("yaay! " + this.firstname + " loves food!" + this.firstname + "is full and happy after he ate!");
+        System.out.println("yaay! " + this.firstname + " loves food!" + this.firstname + " is full and happy after he ate!");
 
     }
     public void sleep(){
@@ -31,7 +31,6 @@ public class Tamagotchi {
     }
     public void walk() {
         Random random = new Random();
-        int mininmum = 1;
         int maximum = 3;
         int randomNumber = random.nextInt(maximum);
         if (randomNumber == 1) {
@@ -43,12 +42,11 @@ public class Tamagotchi {
         }
     }
 
-
     public void tamagotchiSound(){
         System.out.println("....");
     }
 
-    public void printFinishPlaying(){
+    public void finishPlaying(){
         System.out.println("WAUW! It has been a lovely, eventful day! " + this.firstname + " loved it!");
         System.out.println("Thanks for today! " + this.firstname + " is tired and done for today! Thanks for playing, sleep tight!!👋👋");
     }

@@ -18,21 +18,36 @@ public class Dog extends Tamagotchi {
         int toyPick = scanner.nextInt();
 
         if (toyPick == 1){
-            System.out.println("A stuffed animal!" + this.firstname + " loves stuffed animals! Good choice.");
+            System.out.println("A stuffed animal! " + this.firstname + " loves stuffed animals! Good choice.");
         }else if (toyPick == 2){
-            System.out.println("yummy, a bone!" + this.firstname + " loves sticking his teeth in bones! Good choice.");
+            System.out.println("yummy, a bone! " + this.firstname + "loves sticking their teeth in bones! Good choice.");
         }else if (toyPick == 3){
             System.out.println("A ball! Nice! " + this.firstname + " loves running after the ball! Good choice.");
         }else{
             System.out.println("Oh no, you forgot your money at home! Better luck next time..");
         }
         return "";
-
+    }
+     public void petPrintet(){
+         System.out.println("            /~~~~~~~~\\                           _");
+         System.out.println("    ##\\__/ @)      ~~~~~~~~\\                     \\ \\ ) )");
+         System.out.println("    |              /~~\\~~~~~                ((    |  \\");
+         System.out.println("     \\    /           |                          /   |");
+         System.out.println("      (~~~   /         \\____________/~~~~~~~~~~~~   /");
+         System.out.println("       ~~~~|~                                     /");
+         System.out.println("           :                                      |");
+         System.out.println("            \\                                     |");
+         System.out.println("            |                               /      \\");
+         System.out.println("             \\  \\_         :         \\     /~~~\\    |");
+         System.out.println("             /   :~~~~~|   :~~~~~~~~~~|   :     :   :");
+         System.out.println("            /    :    /    :         /    :    /    :");
+         System.out.println("        (~~~     )(~~~     )     (~~~     )(~~~     )");
+         System.out.println("         ~~~~~~~~  ~~~~~~~~       ~~~~~~~~  ~~~~~~~~");
     }
 
         @Override
         public void tamagotchiSound() {
-            System.out.println("Woof");
+            System.out.println("'Woof'\n");
         }
     }
 

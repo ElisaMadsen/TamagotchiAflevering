@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class Cat extends Tamagotchi {
-    public boolean kitten;
-    public boolean numbered;
+    public String kitten;
+    public String numbered;
 
-    public Cat(String firstname, int age, String color, boolean kitten, boolean numbered) {
+    public Cat(String firstname, int age, String color, String kitten, String numbered) {
         super(firstname, age, color);
         this.kitten = kitten;
         this.numbered = numbered;
@@ -18,21 +18,26 @@ public class Cat extends Tamagotchi {
         int toyPick = scanner.nextInt();
 
         if (toyPick == 1){
-            System.out.println("A garn wrench!" + this.firstname + " loves garn wrenches! Good choice.");
+            System.out.println("A garn wrench! " + this.firstname + " loves garn wrenches! Good choice.");
         }else if (toyPick == 2){
-            System.out.println("yummy, fish!" + this.firstname + " loves sticking his teeth in fishes! Good choice.");
+            System.out.println("yummy, fish! " + this.firstname + "loves sticking their teeth in fishes! Good choice.");
         }else if (toyPick == 3){
             System.out.println("A drill stick! Nice! " + this.firstname + " loves running after the feather at the end of the drill stick! Good choice.");
         }else{
             System.out.println("Oh no, you forgot your money at home! Better luck next time..");
         }
         return "";
-
     }
-
+    public void petPrintet(){
+        System.out.println("   /\\_/\\   ");
+        System.out.println("  / o o \\  ");
+        System.out.println(" (   \"   ) ");
+        System.out.println("  \\~(*)~/  ");
+        System.out.println("   // \\\\   ");
+    }
 
     @Override
     public void tamagotchiSound(){
-        System.out.println("miaaaaw");
+        System.out.println("'Miaaaaw'\n");
     }
 }
