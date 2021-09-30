@@ -1,19 +1,18 @@
 import java.util.Scanner;
 
 public class Dog extends Tamagotchi {
-    public boolean puppy;
+    public String puppy;
     public int furLength;
 
-    public Dog(String firstname, String lastname, int age, String color, boolean puppy, int furLength) {
-        super(firstname, lastname, age, color);
+    public Dog(String firstname, int age, String color, String puppy, int furLength) {
+        super(firstname, age, color);
         this.puppy = puppy;
         this.furLength = furLength;
     }
 
-    @Override
     public String shopping(int toyChoice){
         Scanner scanner = new Scanner(System.in);
-        System.out.println(this.firstname + this.lastname + " is out to get new toys. Theres alot of options! What would you like to buy?\nPress the number of your choice:");
+        System.out.println(this.firstname + " is out to get new toys. Theres alot of options! What would you like to buy?\nPress the number of your choice:");
         System.out.println("1. stuffed animal\n2. bone\n3. ball");
 
         int toyPick = scanner.nextInt();

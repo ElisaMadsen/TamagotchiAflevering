@@ -8,38 +8,59 @@ public class Game {
         int catOrDogChoice = scanner.nextInt();
 
         if (catOrDogChoice == 1){
-            System.out.println("You chose dog!");
-            String dogName = "fitto";
-            Dog fitto = new Dog("fitto", " fit", 4, "black", true, 10);
-            System.out.println(fitto.firstname + " is cute.");
+            System.out.println("You chose dog! What would you like to name your dog?");
+            String dogName = scanner.next();
+
+            System.out.println("That's a cute name! How old is " + dogName + "?");
+            int dogAge = scanner.nextInt();
+
+            System.out.println("Awesome! What color is " + dogName + "?");
+            String dogColor = scanner.next();
+
+            System.out.println("And is " + dogName + " a puppy?");
+            String dogOrPuppy = scanner.next();
+
+            System.out.println("Last question! Tell me with a number how long " + dogName + "'s fur length is:");
+            int dogFurlength = scanner.nextInt();
+
+            Dog dog = new Dog(dogName, dogAge, dogColor, dogOrPuppy, dogFurlength);
+            dog.tamagotchiSound();
 
             for (int i = 0; i < 10; i++) {
 
-                fitto.playChoices();
+                dog.playChoices();
 
-                int playChoice = 5;
+                int playChoice = scanner.nextInt();
 
                 if (playChoice == 1){
-                    fitto.feed();
+                    dog.feed();
                 }else if(playChoice == 2){
-                    fitto.sleep();
+                    dog.sleep();
                 }else if (playChoice == 3) {
-                    fitto.play();
+                    dog.play();
                 }else if (playChoice == 4) {
-                    fitto.walk();
+                    dog.walk();
                 }else if (playChoice == 5) {
-                    fitto.shopping(3);
+                    dog.shopping(3);
                 } else {
                     System.out.println("That is not a choice");
                 }
 
-
             }
+
+            dog.printFinishPlaying();
+
         } else if (catOrDogChoice == 2){
             System.out.println("You chose cat!");
+
+
+
         } else {
             System.out.println("please choose 1 or 2");
         }
+
+
+
 
 
 

@@ -4,16 +4,15 @@ public class Cat extends Tamagotchi {
     public boolean kitten;
     public boolean numbered;
 
-    public Cat(String firstname, String lastname, int age, String color, boolean kitten, boolean numbered) {
-        super(firstname, lastname, age, color);
+    public Cat(String firstname, int age, String color, boolean kitten, boolean numbered) {
+        super(firstname, age, color);
         this.kitten = kitten;
         this.numbered = numbered;
     }
 
-    @Override
     public String shopping(int toyChoice){
         Scanner scanner = new Scanner(System.in);
-        System.out.println(this.firstname + this.lastname + " is out to get new toys. Theres alot of options! What would you like to buy?\nPress the number of your choice:");
+        System.out.println(this.firstname + " is out to get new toys. Theres alot of options! What would you like to buy?\nPress the number of your choice:");
         System.out.println("1. garn wrench🧶\n2. fish\n3. drill stick");
 
         int toyPick = scanner.nextInt();
