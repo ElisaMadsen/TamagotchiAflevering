@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Game {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Hi! Welcome to your tamagotchi! Do you want a dog 🐶 or cat 🐱 to play with?");
+        System.out.println("Hi! Welcome to your tamagotchi! Do you want a dog 🐶 or cat 🐱 to play with?\n");
         System.out.println("Press 1 for dog and 2 for cat:");
         int catOrDogChoice = scanner.nextInt();
 
@@ -44,6 +44,9 @@ public class Game {
                     dog.walk();
                 } else if (playChoice == 5) {
                     dog.shopping(3);
+                } else if (playChoice == 6) {
+                    System.out.println("You quit the game😢");
+                    break;
                 } else {
                     System.out.println("That is not a choice");
                 }
@@ -88,11 +91,16 @@ public class Game {
                     cat.walk();
                 } else if (playChoice == 5) {
                     cat.shopping(3);
-                } else {
+
+                } else if (playChoice == 6) {
+                    System.out.println("You quit the game😢");
+                    break;
+                }else {
                     System.out.println("That is not a choice");
                 }
             }
             cat.finishPlaying();
+
         } else {
             System.out.println("please choose 1 or 2");
         }

@@ -15,12 +15,9 @@ public class Tamagotchi {
     public void playChoices(){
         System.out.println("What would you like to do with your pet?");
         System.out.println("please press the number of your choice");
-        System.out.println("1. feed\n2. sleep\n3. play\n4. walk\n5. shopping");
+        System.out.println("1. feed\n2. sleep\n3. play\n4. walk\n5. shopping\n6. quit game");
     }
 
-    public void play(){
-        System.out.println(this.firstname + " is playing and having fun with a ball!");
-    }
     public void feed(){
         System.out.println("yaay! " + this.firstname + " loves food!" + this.firstname + " is full and happy after he ate!");
 
@@ -28,6 +25,9 @@ public class Tamagotchi {
     public void sleep(){
         System.out.println(this.firstname + " is sleeping nice and safe💤");
 
+    }
+    public void play(){
+        System.out.println(this.firstname + " is playing and having fun with a ball!");
     }
     public void walk() {
         Random random = new Random();
@@ -47,7 +47,7 @@ public class Tamagotchi {
     }
 
     public void finishPlaying(){
-        System.out.println("WAUW! It has been a lovely, eventful day! " + this.firstname + " loved it!");
+        System.out.println("WAUW! It has been a lovely, eventful day! " + this.firstname + " loved it!\n");
         System.out.println("Thanks for today! " + this.firstname + " is tired and done for today! Thanks for playing, sleep tight!!👋👋");
     }
 
