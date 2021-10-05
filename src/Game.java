@@ -102,7 +102,7 @@ public class Game {
             cat.finishPlaying();
 
         } else {
-            System.out.println("please choose 1 or 2");
+            System.out.println("please choose 1 for dog or 2 for cat!");
         }
     }
 }
