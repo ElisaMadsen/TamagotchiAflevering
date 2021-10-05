@@ -19,7 +19,7 @@ public class Tamagotchi {
     }
 
     public void feed(){
-        System.out.println("yaay! " + this.firstname + " loves food!" + this.firstname + " is full and happy after he ate!");
+        System.out.println("yaay! " + this.firstname + " loves food!🥓 " + this.firstname + " is full and happy after they ate!");
 
     }
     public void sleep(){
@@ -27,7 +27,7 @@ public class Tamagotchi {
 
     }
     public void play(){
-        System.out.println(this.firstname + " is playing and having fun with a ball!");
+        System.out.println(this.firstname + " is playing and having fun with a ball!🥎");
     }
     public void walk() {
         Random random = new Random();
@@ -38,7 +38,7 @@ public class Tamagotchi {
         } else if (randomNumber == 2) {
             System.out.println(this.firstname + " is now out for a walk! Theres another cute dog in the park. They are now playing and having fun!");
         } else {
-            System.out.println(this.firstname + " is now out for a walk!" + this.firstname + " is in a funny mood. Keep an extra eye out!");
+            System.out.println(this.firstname + " is now out for a walk! " + this.firstname + " is in a funny mood. Keep an extra eye out!");
         }
     }
 

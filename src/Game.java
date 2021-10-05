@@ -3,10 +3,13 @@ import java.util.Scanner;
 public class Game {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
+        //Welcome and choosing between dog or cat
         System.out.println("Hi! Welcome to your tamagotchi! Do you want a dog 🐶 or cat 🐱 to play with?\n");
         System.out.println("Press 1 for dog and 2 for cat:");
         int catOrDogChoice = scanner.nextInt();
 
+        //User creating the dog if that is chosen
         if (catOrDogChoice == 1) {
             System.out.println("You chose dog! What would you like to name your dog?🐶");
             String dogName = scanner.next();
@@ -23,13 +26,16 @@ public class Game {
             System.out.println("Last question! Tell me with a number how long " + dogName + "'s fur length is:");
             int dogFurlength = scanner.nextInt();
 
+            //Creating users dog
             Dog dog = new Dog(dogName, dogAge, dogColor, dogOrPuppy, dogFurlength);
             System.out.println("Nice! Say hello to your new pet: " + dogName + "!");
             dog.petPrintet();
             dog.tamagotchiSound();
 
+            //Rounds of game
             for (int i = 0; i < 10; i++) {
 
+                //Showing the options player can choose from
                 dog.playChoices();
 
                 int playChoice = scanner.nextInt();
@@ -52,8 +58,10 @@ public class Game {
                 }
             }
 
+            //Game is finished
             dog.finishPlaying();
 
+            //User creating the cat if that is chosen
         } else if (catOrDogChoice == 2) {
             System.out.println("You chose cat! What would you like to name your cat?🐱");
             String catName = scanner.next();
@@ -70,13 +78,16 @@ public class Game {
             System.out.println("Last question! Tell me if " + catName + " is numbered or not - just in case they run away😉:");
             String catNumbered = scanner.next();
 
+            //Creating users cat
             Cat cat = new Cat(catName, catAge, catColor, catOrKitten, catNumbered);
             System.out.println("Nice! Say hello to your new pet: " + catName + "!");
             cat.petPrintet();
             cat.tamagotchiSound();
 
+            //Rounds of game
             for (int i = 0; i < 10; i++) {
 
+                //Showing the options player can choose from
                 cat.playChoices();
 
                 int playChoice = scanner.nextInt();
@@ -99,6 +110,8 @@ public class Game {
                     System.out.println("That is not a choice");
                 }
             }
+
+            //Game is finished
             cat.finishPlaying();
 
         } else {
